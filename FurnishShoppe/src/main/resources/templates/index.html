@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>Le's Bookstore</title>
+<title>Home</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet" />
@@ -21,27 +21,27 @@
 <!-- Custom styles for this template -->
 <link href="/css/style.css" rel="stylesheet" />
 
-<link rel="icon" href="/image/applie-touch-icon.png" />
+<link rel="icon" href="/image/logo.png" />
 </head>
 
 <body>
 	<div th:fragment="navbar">
 		<div class="page-top"
-			style="width: 100%; height: 20px; background-color: #f46b42;"></div>
+			style="width: 100%; height: 20px; background-color: blue;"></div>
 		<!-- Static navbar -->
 		<nav class="navbar navbar-default navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" th:href="@{/}">LE'S BOOKSTORE</a>
+					<a class="navbar-brand" th:href="@{/}">FurnishShoppe</a>
 				</div>
 				<div id="navbar">
 					<ul class="nav navbar-nav navbar-left">
 						<li class="dropdown"><a th:href="@{/bookshelf}"
 							class="dropdown-toggle" data-toggle="dropdown" role="button"
-							aria-haspopup="true" aria-expanded="false">BOOKS <span
+							aria-haspopup="true" aria-expanded="false">Furnish<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a th:href="@{/bookshelf}">Browse the bookshelf</a></li>
+								<li><a th:href="@{/bookshelf}">Browse the Furnish</a></li>
 								<li><a th:href="@{/hours}">Store hours &#38; Directions</a></li>
 								<li><a th:href="@{/faq}">FAQ</a></li>
 
@@ -49,7 +49,7 @@
 						<form class="navbar-form" th:action="@{/searchBook}" method="post">
 							<div class="form-group">
 								<input type="text" name="keyword" class="form-control"
-									placeholder="Book title" />
+									placeholder="Search for Products,Brands and More" />
 							</div>
 							<button type="submit" class="btn btn-default">Search</button>
 						</form>
@@ -77,25 +77,22 @@
 				<div class="col-xs-3 footerleft">
 					<div class="logofooter">
 						<a th:href="@{/}"><img class="img-responsive"
-							src="/image/logo.png" style="width: 200px;" /></a>
+							src="" style="width: 200px;" /></a>
 					</div>
-					<p>
-						Le's Independent Book Store. <br />Serving our customers with the
-						best.
-					</p>
+					
 				</div>
 				<div class="col-xs-3 paddingtop-bottom">
 					<h6 class="heading7">CONTACT</h6>
 					<ul class="post">
 						<p>
-							<i class="fa fa-map-pin"></i> 123 XXX Ave<br /> Boston MA, USA
-							02112
+							<i class="fa fa-map-pin"> FurnishShoppe</i><br /> Bangalore
+					
 						</p>
 						<p>
-							<i class="fa fa-phone"></i> Phone (USA) : +1 999 999 9999
+							<i class="fa fa-phone"></i> Phone (India) : +1 999 999 9999
 						</p>
 						<p>
-							<i class="fa fa-envelope"></i> E-mail : info@lebookstore.com
+							<i class="fa fa-envelope"></i> E-mail : info@furnishshoppe.com
 						</p>
 					</ul>
 				</div>
@@ -119,7 +116,7 @@
 
 		<div class="copyright">
 			<div class="col-md-6">
-				<p>© 2017 - All Rights Reserved</p>
+				<p>© 2019 - All Rights Reserved</p>
 			</div>
 			<div class="col-md-6">
 				<ul class="bottom_ul">
