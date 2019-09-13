@@ -1,5 +1,62 @@
-{"properties": [{
-  "name": "support.email",
-  "type": "java.lang.String",
-  "description": "A description for 'support.email'"
-}]}
+{"properties": [
+  {
+    "name": "support.email",
+    "type": "java.lang.String",
+    "description": "A description for 'support.email'"
+  },
+  {
+    "name": "check-template",
+    "type": "java.lang.String",
+    "description": "A description for 'check-template'"
+  },
+  {
+    "name": "thymeleaf",
+    "type": "java.lang.String",
+    "description": "A description for 'thymeleaf'"
+  },
+  {
+    "name": "cache",
+    "type": "java.lang.String",
+    "description": "A description for 'cache'"
+  },
+  {
+    "name": "content-type",
+    "type": "java.lang.String",
+    "description": "A description for 'content-type'"
+  },
+  {
+    "name": "enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'enabled'"
+  },
+  {
+    "name": "encoding",
+    "type": "java.lang.String",
+    "description": "A description for 'encoding'"
+  },
+  {
+    "name": "mode",
+    "type": "java.lang.String",
+    "description": "A description for 'mode'"
+  },
+  {
+    "name": "prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'prefix'"
+  },
+  {
+    "name": "suffix",
+    "type": "java.lang.String",
+    "description": "A description for 'suffix'"
+  },
+  {
+    "name": "check-template-location",
+    "type": "java.lang.String",
+    "description": "A description for 'check-template-location'"
+  },
+  {
+    "name": "spring",
+    "type": "java.lang.String",
+    "description": "A description for 'spring'"
+  }
+]}

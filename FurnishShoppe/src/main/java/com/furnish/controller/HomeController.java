@@ -9,7 +9,7 @@ public class HomeController {
 	@RequestMapping("/login")
 	public String Home(Model themodel){
 		
-		return "list";
+		return "myAccount";
 			
 	}
 
