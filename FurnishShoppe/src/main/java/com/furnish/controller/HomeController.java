@@ -6,11 +6,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-	@RequestMapping("/login")
-	public String Home(Model themodel){
-		
+	
+	@RequestMapping("/")
+	public String Index() {
+		return "index";
+	}
+	@RequestMapping("/myAccount")
+	public String Home(){
 		return "myAccount";
 			
 	}
-
+	@RequestMapping("/login")
+	public String Login(Model model) {
+		model.addAttribute("classActiveLogin",true);
+		return "myAccount";
+	}
+	
+	
 }
