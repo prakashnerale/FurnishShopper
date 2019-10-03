@@ -23,6 +23,11 @@ public class UserRole implements Serializable {
 	
 	public UserRole() {} //default constructor(not really necessary)
 	
+	public UserRole(User user,Role role) {
+		this.user=user;
+		this.role=role;
+	}
+	
 	@ManyToOne(fetch= FetchType.EAGER)
 	@JoinColumn(name="user_id")
 	private User user;
