@@ -8,14 +8,17 @@ import { MatSliderModule } from '@angular/material/slider';
 import 'hammerjs';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
-import {MatToolbarModule} from '@angular/material'
+import {MatToolbarModule} from '@angular/material';
+import { MyAccountComponent } from './components/my-account/my-account.component'
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {MatToolbarModule} from '@angular/material'
     MatFormFieldModule, 
     MatButtonModule, 
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
