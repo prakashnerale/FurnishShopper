@@ -9,7 +9,7 @@ export class LoginService {
 
   constructor(private http: Http) { }
   sendCredential(username: string, password: string) {
-  	let url = "http://localhost:8081/token";
+  	let url = "http://localhost:8080/token";
   	let encodedCredentials = btoa(username+":"+password);
   	let basicHeader = "Basic "+encodedCredentials;
   	let headers = new Headers ({
@@ -21,7 +21,7 @@ export class LoginService {
   }
 
   checkSession() {
-    let url = "http://localhost:8081/checkSession";
+    let url = "http://localhost:8080/checkSession";
     
     let headers = new Headers ({
       'x-auth-token' : localStorage.getItem('xAuthToken')
