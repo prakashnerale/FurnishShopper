@@ -16,7 +16,7 @@ import com.furnish.domain.User;
 @Table(name="user_role")
 public class UserRole implements Serializable {
  
-	private static final long serialVersionUID = 25645672;
+	private static final long serialVersionUID = 25645672L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private	long userRoleId;
@@ -65,7 +65,4 @@ public class UserRole implements Serializable {
 	}
 	
 	
-	
-	
-
 }
