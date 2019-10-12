@@ -22,9 +22,9 @@ import com.furnish.domain.security.Authority;
 import com.furnish.domain.security.UserRole;
 
 @Entity
-public class User implements UserDetails, Serializable {
-	
-	private static final long serialVersionUID = 121445L;
+public class User implements UserDetails, Serializable{
+
+	private static final long serialVersionUID = 902783495L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,10 +40,9 @@ public class User implements UserDetails, Serializable {
 	private String phone;
 	private boolean enabled = true;
 	
-	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "user", cascade=CascadeType.MERGE,fetch = FetchType.EAGER)
 	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<>();
-	
 
 	public Long getId() {
 		return id;
@@ -101,16 +100,18 @@ public class User implements UserDetails, Serializable {
 		this.phone = phone;
 	}
 
+	
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
 	public Set<UserRole> getUserRoles() {
 		return userRoles;
 	}
 
 	public void setUserRoles(Set<UserRole> userRoles) {
 		this.userRoles = userRoles;
-	}
-
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
 	}
 
 	@Override
@@ -144,9 +145,6 @@ public class User implements UserDetails, Serializable {
 	public boolean isEnabled() {
 		return enabled;
 	}
-	
-	
-	
 	
 	
 	

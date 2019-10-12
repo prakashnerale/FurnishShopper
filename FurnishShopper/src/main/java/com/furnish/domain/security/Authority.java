@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 public class Authority implements GrantedAuthority, Serializable {
 	
-   private static final long serialVersionUID=123456;// Some random Number
+   private static final long serialVersionUID=123456L;// Some random Number
    private final String authority;
    
     public Authority(String authority) {

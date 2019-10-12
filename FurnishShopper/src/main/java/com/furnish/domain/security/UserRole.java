@@ -1,5 +1,6 @@
 package com.furnish.domain.security;
 
+
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -12,28 +13,31 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.furnish.domain.User;
+
 @Entity
 @Table(name="user_role")
-public class UserRole implements Serializable {
- 
-	private static final long serialVersionUID = 25645672L;
+public class UserRole implements Serializable{
+	
+	private static final long serialVersionUID = 456L;
+	
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private	long userRoleId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long userRoleId;
 	
-	public UserRole() {} //default constructor(not really necessary)
+	public UserRole () {}
 	
-	public UserRole(User user,Role role) {
-		this.user=user;
-		this.role=role;
+	public UserRole (User user, Role role) {
+		this.user = user;
+		this.role = role;
 	}
 	
-	@ManyToOne(fetch= FetchType.EAGER)
-	@JoinColumn(name="user_id")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id")
 	private User user;
 	
-	@ManyToOne(fetch= FetchType.EAGER)
-	@JoinColumn(name="role_id")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "role_id")
 	private Role role;
 
 	public long getUserRoleId() {
@@ -58,10 +62,6 @@ public class UserRole implements Serializable {
 
 	public void setRole(Role role) {
 		this.role = role;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 	
 	
