@@ -82,11 +82,6 @@
 			<version>4.3.1.Final</version>
 		</dependency>
 		<dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
-		
-		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
@@ -111,6 +106,15 @@
            <artifactId>spring-data-commons-core</artifactId>
            <version>1.0.0.RELEASE</version>
         </dependency>
+        <dependency>
+          <groupId>redis.clients</groupId>
+          <artifactId>jedis</artifactId>
+          <version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+        <dependency>
+          <groupId>io.lettuce</groupId>
+          <artifactId>lettuce-core</artifactId>
+       </dependency>
       </dependencies>
 
 	<build>
