@@ -31,7 +31,7 @@ export class LoginService {
   }
 
   logout() {
-    let url = "http://localhost:8081/user/logout";
+    let url = "http://localhost:8080/user/logout";
     
     let headers = new Headers ({
       'x-auth-token' : localStorage.getItem('xAuthToken')

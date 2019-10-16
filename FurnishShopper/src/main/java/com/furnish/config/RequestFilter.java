@@ -32,7 +32,7 @@ public class RequestFilter implements Filter{
 				e.printStackTrace();
 			}
 		} else {
-			System.out.println("Pre-fight");
+			System.out.println("Pre-fight--Working");
 			response.setHeader("Access-Control-Allowed-Methods", "POST, GET, DELETE");
 			response.setHeader("Access-Control-Max-Age", "3600");
 			response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, x-auth-token, " +
