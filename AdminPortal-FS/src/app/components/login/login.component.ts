@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../services/login.service';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService,private router:Router) { }
 
   onSubmit() {
 	  this.loginService.sendCredential(this.credential.username, this.credential.password).subscribe
@@ -23,15 +23,14 @@ export class LoginComponent implements OnInit {
   			console.log(res);
   			localStorage.setItem("xAuthToken", res.json().token);
 			this.loggedIn = true;
-
+		},
 		  
-	         },
-		  
-
   		error => {
   			console.log(error);
-  		}
-  	);
+		  }
+		);
+		
+	//this.router.navigate(['/home-page']);
   }
   ngOnInit() {
     this.loginService.checkSession().subscribe(

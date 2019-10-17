@@ -4,6 +4,8 @@ import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
   MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule,MatGridListModule
 } from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   imports: [
   CommonModule, 
@@ -16,7 +18,9 @@ import {
   MatMenuModule,
   MatIconModule,
   MatProgressSpinnerModule,
-  MatGridListModule
+  MatGridListModule,
+  MatSelectModule,
+  MatSlideToggleModule
   ],
   exports: [
   CommonModule,
@@ -29,7 +33,9 @@ import {
    MatMenuModule,
    MatIconModule,
    MatProgressSpinnerModule,
-   MatGridListModule
+   MatGridListModule,
+   MatSelectModule,
+   MatSlideToggleModule
    ],
 })
 export class CustomMaterialModule { }
