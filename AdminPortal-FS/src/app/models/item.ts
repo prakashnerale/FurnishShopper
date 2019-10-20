@@ -7,7 +7,7 @@ export class Item {
 	public made: string;
 	public shippingWeight: number;
 	public listPrice: number;
-	public ourPrice: number;
+	public sellingPrice: number;
 	public inStockNumber: number;
 	public active: boolean;
 	public description: string;

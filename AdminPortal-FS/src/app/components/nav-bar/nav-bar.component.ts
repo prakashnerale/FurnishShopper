@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  private loggedIn=true;
+  private loggedIn=false;
 
   constructor(private loginService:LoginService,private router:Router) { }
 
@@ -30,15 +30,19 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  hideComponent(){
+    this.loggedIn=true;
+  }
+
   ngOnInit() {
     this.loginService.checkSession().subscribe(
-  		res => {
-  			this.loggedIn=true;
-  		},
-  		error => {
-  			this.loggedIn=false;
-  		}
-  	);
+      res => {
+        this.loggedIn=true;
+      },
+      error => {
+        this.loggedIn=false;
+      }
+    );
   }
-}
 
+}

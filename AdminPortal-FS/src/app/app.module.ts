@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginService } from './services/login.service';
+import {AddItemService} from './services/add-item.service';
 
 
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ import { AddItemComponent } from './components/add-item/add-item.component';
   ],
   
   providers: [
-    LoginService
+    LoginService,
+    AddItemService
   ],
 
   bootstrap: [AppComponent]

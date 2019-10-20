@@ -1,6 +1,6 @@
 <div class="container">
     <div [hidden]="bookAdded">
-        <h3 style="margin-top: 30px;">Add New Item Here<span style="font-size:small">* is a required field</span></h3>
+        <h3 style="margin-top: 30px;">Add New Item Here</h3>
          <form (ngSubmit)="onSubmit()">
             <mat-grid-list cols="4" rowHeight="70px">
               <mat-grid-tile [colspan]="1" [rowspan]="1">
@@ -59,7 +59,7 @@
                         </mat-grid-tile>
                         <mat-grid-tile [colspan]="1" [rowspan]="1">
                             <mat-form-field>
-                               <input matInput id="ourPrice" type="number" [(ngModel)]="newItem.ourPrice" name="ourPrice" step="0.01" placeholder="Our Price (INR)">
+                               <input matInput id="sellingPrice" type="number" [(ngModel)]="newItem.sellingPrice" name="sellingPrice" step="0.01" placeholder="Selling Price (INR)">
                             </mat-form-field>
                         </mat-grid-tile>
                     </mat-grid-list>
@@ -75,13 +75,18 @@
                         </mat-grid-tile>
                     </mat-grid-list>
                     
-                    <mat-grid-list cols="4" rowHeight="60px">
+                    <mat-grid-list cols="4" rowHeight="70px">
                             <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <p><mat-form-field >
+                                    <mat-form-field >
                                             <textarea matInput id="description" [(ngModel)]="newItem.description" name="description" placeholder="Description" required></textarea>
-                                    </mat-form-field></p>
+                                    </mat-form-field>
                             </mat-grid-tile>
                          </mat-grid-list>
+                         <span>
+                           Image&nbsp;
+                           <input id="tile" type="file" id="ItemImage" name="ItemImage" (change)="uploadImageService.fileChangeEvent($event)">
+                        </span>
+                           <br><br>
                     <mat-grid-list cols="20" rowHeight="70px">
                             <mat-grid-tile [colspan]="3" [rowspan]="1">
                                 <button color="primary" mat-raised-button type="submit">Add</button>
