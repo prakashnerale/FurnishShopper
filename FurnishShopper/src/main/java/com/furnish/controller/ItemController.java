@@ -2,6 +2,7 @@ package com.furnish.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,13 +12,14 @@ import com.furnish.domain.Item;
 import com.furnish.service.itemService;
 
 @RestController
-
+@RequestMapping("/item")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ItemController {
 	
-	@Autowired
+  @Autowired
 	private itemService itemService;
 	
-	@RequestMapping(value="/item/add",method=RequestMethod.POST)
+	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public Item addItemPost(@RequestBody Item item) {
 		return itemService.save(item);
 	}

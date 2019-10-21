@@ -33,7 +33,7 @@ public class Item implements Serializable {
 	@Column(columnDefinition="text")
 	private String description;
 	
-	@Transient
+	@Transient//wont store in database,stores in server. 
 	private MultipartFile itemImage;
 
 	public Long getId() {

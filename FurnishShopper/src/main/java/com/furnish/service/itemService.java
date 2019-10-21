@@ -6,15 +6,15 @@ import com.furnish.domain.Item;
 
 public interface itemService {
 	
-	      List<Item> findAll();
-	
-	      Item findById(Long id);
-	      
-	      Item save(Item item);
-	      
-	      List<Item> blurrySearch(String tittle);
-	      
-	      void deleteById(Long id);
+	List<Item> findAll();//mapper
+
+	Item findById(Long id);//mapper
+
+	Item save(Item item);//mapper
+
+	List<Item> blurrySearch(String tittle);//mapper
+
+	void deleteById(Long id);//mapper
 	
 	
 }

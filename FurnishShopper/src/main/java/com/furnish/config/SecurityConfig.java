@@ -31,12 +31,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			"/css/**",
 			"/js/**",
 			"/image/**",
-			"/book/**",
+			"/item/**",
 			"/user/**"
 	};
 	
 	@Override
-	protected void configure(HttpSecurity http) throws Exception {
+	protected void configure(HttpSecurity http) throws Exception //disable the SpringSecurity login page.
+	{
 		http.csrf().disable().cors().disable().httpBasic().and().authorizeRequests()
 		.antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 	}

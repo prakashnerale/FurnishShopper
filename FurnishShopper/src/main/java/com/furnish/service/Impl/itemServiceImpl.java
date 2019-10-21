@@ -21,10 +21,10 @@ public class itemServiceImpl implements  itemService {
 	@Override
 	public List<Item> findAll() 
 	{
-    List<Item> itemList = (List<Item>) itemRepository.findAll();
-		
+		List<Item> itemList = (List<Item>) itemRepository.findAll();
+
 		List<Item> activeItemList = new ArrayList<>();
-		
+
 		for (Item item : itemList)
 		{
 			if(item.isActive())
@@ -32,7 +32,7 @@ public class itemServiceImpl implements  itemService {
 				activeItemList.add(item);
 			}
 		}
-		
+
 		return activeItemList;
 	}
 
@@ -41,7 +41,7 @@ public class itemServiceImpl implements  itemService {
 	@Override
 	public Item findById(Long id) 
 	{
-		
+
 		return itemRepository.findById(id).orElse(null);
 	}
 
@@ -50,7 +50,7 @@ public class itemServiceImpl implements  itemService {
 	@Override
 	public Item save(Item item) 
 	{
-		
+
 		return itemRepository.save(item);
 	}
 
@@ -59,10 +59,10 @@ public class itemServiceImpl implements  itemService {
 	@Override
 	public List<Item> blurrySearch(String keyword) 
 	{
-      List<Item> ItemList = itemRepository.findByTitleContaining(keyword);
-		
+		List<Item> ItemList = itemRepository.findByTitleContaining(keyword);
+
 		List<Item> activeItemList = new ArrayList<>();
-		 
+
 		for (Item Item : ItemList) 
 		{
 			if(Item.isActive())
@@ -70,7 +70,7 @@ public class itemServiceImpl implements  itemService {
 				activeItemList.add(Item);
 			}
 		}
-		
+
 		return activeItemList;
 	}
 
@@ -79,14 +79,6 @@ public class itemServiceImpl implements  itemService {
 	@Override
 	public void deleteById(Long id) {
 		itemRepository.deleteById(id);
-		
+
 	}
-	
-
-
-
-	
-	
-
-	
 }
