@@ -17,7 +17,7 @@ public class Item implements Serializable {
 	private static final long serialVersionUID = 123L;
     
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="increment")
     private Long id;
 	private String title;
 	private String manufacturer;
