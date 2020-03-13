@@ -36,7 +36,7 @@ public class LoginController {
 		return Collections.singletonMap("token", session.getId());
 	}
 	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	//@SuppressWarnings({ "rawtypes", "unchecked" })
 	@RequestMapping("/checkSession")
 	public ResponseEntity checkSession() {
 		
